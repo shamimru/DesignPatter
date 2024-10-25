@@ -10,6 +10,7 @@ public class Person {
 	 String fname;
 	 String lname;
 
+//	 lazy loading 
 	private static Person person;
 
 	private Person() {
