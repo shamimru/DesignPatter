@@ -6,7 +6,7 @@ public class Student {
 //	eager loading 
 	private static Student student=new Student();
 	
-	public static Student getStudent() {
+	public static synchronized Student getStudent() {
 		return student;
 	}
 

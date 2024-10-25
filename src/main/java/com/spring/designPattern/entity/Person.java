@@ -6,9 +6,9 @@ import lombok.Data;
 
 public class Person {
 
-	 int id;
-	 String fname;
-	 String lname;
+	int id;
+	String fname;
+	String lname;
 
 //	 lazy loading 
 	private static Person person;
@@ -22,24 +22,25 @@ public class Person {
 		this.id = id;
 		this.fname = fname;
 		this.lname = lname;
-	
+
 	}
-	
 
 	public static Person getPerson() {
 
 		if (person == null) {
-			return new Person();
+			synchronized (Person.class) {
+				if (person == null) {
+					return new Person();
+				}
+			}
+
 		}
 
 		return person;
 	}
-	
 
-	public  void getPring() {
-		System.out.println("id is " + id+" and first name is "+fname +" and last name is "+lname);
+	public void getPring() {
+		System.out.println("id is " + id + " and first name is " + fname + " and last name is " + lname);
 	}
 
 }
-
-
