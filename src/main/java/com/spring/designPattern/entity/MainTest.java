@@ -1,7 +1,6 @@
 package com.spring.designPattern.entity;
 
-import com.spring.designPattern.factoryDesign.Employee;
-import com.spring.designPattern.factoryDesign.EmployeeFactory;
+import com.spring.designPattern.builder.User;
 
 public class MainTest {
 
@@ -30,14 +29,17 @@ public class MainTest {
 //		System.out.println("Student "+ s2.hashCode());
 
 		
-		Employee employee = EmployeeFactory.getEmployee("ANDROID");
-		System.out.println(employee.getSalery());
+//		Employee employee = EmployeeFactory.getEmployee("ANDROID");
+//		System.out.println(employee.getSalery());
+//		
+//		Employee WEB = EmployeeFactory.getEmployee("WEB");
+//		System.out.println(WEB.getSalery());
+//		
+//		
+//		System.out.println("hello juy");
 		
-		Employee WEB = EmployeeFactory.getEmployee("WEB");
-		System.out.println(WEB.getSalery());
 		
-		
-		System.out.println("hello juy");
+
 
 	}
 
