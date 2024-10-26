@@ -35,6 +35,9 @@ public class MainTest {
 		
 		Employee WEB = EmployeeFactory.getEmployee("WEB");
 		System.out.println(WEB.getSalery());
+		
+		
+		System.out.println("hello juy");
 
 	}
 
